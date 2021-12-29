@@ -1,9 +1,85 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import styles from '../styles/Home.module.css';
+import { Table } from 'antd';
+import dummy from '../dummy/rka.json';
+import { LockOutlined, UnlockOutlined } from '@ant-design/icons';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
+  const formatNumber = (num: number, div = '.') => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, div);
+  };
+  const columns = [
+    {
+      title: 'RKA',
+      dataIndex: 'name',
+      key: 'name',
+      render: (_: null, obj: any) => (
+        <Link href={'/rka/' + obj.id}>{obj.name}</Link>
+      ),
+    },
+    {
+      title: '#Satker',
+      dataIndex: 'satker',
+      key: 'satker',
+      align: 'center' as 'center',
+    },
+    {
+      title: 'APBN',
+      dataIndex: 'apbn',
+      key: 'apbn',
+      align: 'right' as 'right',
+      render: (_: null, obj: any) => formatNumber(obj.apbn),
+    },
+    {
+      title: 'NON-PNBP',
+      dataIndex: 'non_pnbp',
+      key: 'non_pnbp',
+      align: 'right' as 'right',
+      render: (_: null, obj: any) => formatNumber(obj.non_pnbp),
+    },
+    {
+      title: 'BPPTN-BH',
+      dataIndex: 'bpptn_bh',
+      key: 'bpptn_bh',
+      align: 'right' as 'right',
+      render: (_: null, obj: any) => formatNumber(obj.bpptn_bh),
+    },
+    {
+      title: 'BOPTN',
+      dataIndex: 'boptn',
+      key: 'boptn',
+      align: 'right' as 'right',
+      render: (_: null, obj: any) => formatNumber(obj.boptn),
+    },
+    {
+      title: 'Total',
+      key: 'total',
+      align: 'right' as 'right',
+      render: (_: null, obj: any) =>
+        formatNumber(obj.apbn + obj.non_pnbp + obj.bpptn_bh + obj.boptn),
+    },
+    {
+      title: 'Status',
+      dataIndex: 'status',
+      key: 'status',
+      align: 'center' as 'center',
+      render: (_: null, obj: any) => {
+        return {
+          props: {
+            style: {
+              background: obj.status == 'OPEN' ? '#52c41a' : 'inherit',
+            },
+          },
+          children:
+            obj.status == 'OPEN' ? <UnlockOutlined /> : <LockOutlined />,
+        };
+      },
+    },
+  ];
+  const data = dummy;
   return (
     <div className={styles.container}>
       <Head>
@@ -12,61 +88,20 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          style={{ width: '100%' }}
+        />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

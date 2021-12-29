@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "RKA 2022",
+    "satker": 39,
+    "apbn": 0,
+    "non_pnbp": 801401739096,
+    "bpptn_bh": 97864814000,
+    "boptn": 34750000000,
+    "status": "OPEN"
+  },
+  {
+    "id": 1,
+    "name": "RKA 2021",
+    "satker": 39,
+    "apbn": 0,
+    "non_pnbp": 631895255995,
+    "bpptn_bh": 89088583000,
+    "boptn": 32889769000,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA Suplemen 2021",
+    "satker": 23,
+    "apbn": 0,
+    "non_pnbp": 121721653186,
+    "bpptn_bh": 0,
+    "boptn": 0,
+    "status": "OPEN"
+  },
+  {
+    "id": 1,
+    "name": "RKA 2020",
+    "satker": 39,
+    "apbn": 0,
+    "non_pnbp": 664342806159,
+    "bpptn_bh": 95509352000,
+    "boptn": 23435072117,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA Suplemen 2020",
+    "satker": 21,
+    "apbn": 0,
+    "non_pnbp": 129017423750,
+    "bpptn_bh": 0,
+    "boptn": 257394328,
+    "status": ""
+  },
+  {
+    "id": 1,
+    "name": "RKA 2019",
+    "satker": 40,
+    "apbn": 0,
+    "non_pnbp": 885595835000,
+    "bpptn_bh": 97034000000,
+    "boptn": 28928500000,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA 2019 Lama",
+    "satker": 38,
+    "apbn": 0,
+    "non_pnbp": 671817420564,
+    "bpptn_bh": 98434000000,
+    "boptn": 0,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA Suplemen 2019",
+    "satker": 21,
+    "apbn": 0,
+    "non_pnbp": 136641188988,
+    "bpptn_bh": 0,
+    "boptn": 0,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA 2018",
+    "satker": 38,
+    "apbn": 0,
+    "non_pnbp": 704320886677,
+    "bpptn_bh": 119294000000,
+    "boptn": 0,
+    "status": "CLOSE"
+  },
+  {
+    "id": 1,
+    "name": "RKA LATIHAN",
+    "satker": 10,
+    "apbn": 9000000000,
+    "non_pnbp": 608000000000,
+    "bpptn_bh": 109000000000,
+    "boptn": 9000000000,
+    "status": "OPEN"
+  }
+]
