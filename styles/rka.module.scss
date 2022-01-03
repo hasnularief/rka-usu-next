@@ -1,0 +1,39 @@
+@mixin fontSizeKeterangan {
+  font-size: 0.85em;
+}
+
+.rkaModule{
+  margin: 0 15px;
+  margin-top: 25px;
+
+  .keteranganAwal{
+    @include fontSizeKeterangan;
+    tr{
+      height: 2.85em;
+    }
+  }
+  
+  .keteranganTotal{
+    @include fontSizeKeterangan;
+  
+    td{
+      border: 2px solid #dddddd;
+      height: 2.85em;
+  
+      &:first-child{
+        padding-left: 20px;
+      }
+  
+      &:last-child{
+        text-align: right;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .headerDaftarPelaksana{
+    margin-top: 30px;
+
+    
+  }
+}

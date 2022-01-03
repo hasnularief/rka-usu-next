@@ -1,0 +1,126 @@
+{
+  "1": {
+    "tahun_anggaran": 2018,
+    "mak": "Akun Pengeluaran (MAK) 2018 Final",
+    "renstra": "Renstra Universitas 2020-2024",
+    "kokin": "Kontrak Kinerja Rektor 2020",
+    "jumlah_pelaksana": "10 Satuan Kerja",
+    "apbn": 9000000000,
+    "non_pnbp": 608000000000,
+    "bpptn_bh": 109000000000,
+    "boptn": 9000000000,
+    "total_anggaran": 735000000000,
+    "daftar_pelaksana": [
+      {
+        "id": 1,
+        "jenis": "Biro",
+        "satuan_kerja": "Biro Keuangan",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 2,
+        "jenis": "Biro",
+        "satuan_kerja": "Biro Penelitian, Pengabdian Kepada Masyarakat dan Kerjasama",
+        "apbn": 0,
+        "non_pnbp": 50000000000,
+        "bpptn_bh": 100000000000,
+        "boptn": 0,
+        "total_pagu": 600000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 3,
+        "jenis": "Biro",
+        "satuan_kerja": "Biro Sistem Informasi, Perencanaan dan Pengembangan",
+        "apbn": 1000000000,
+        "non_pnbp": 100000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 103000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 4,
+        "jenis": "Biro",
+        "satuan_kerja": "Biro Sumber Daya Manusia",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 5,
+        "jenis": "Fakultas",
+        "satuan_kerja": "Fakultas Kedokteran",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 6,
+        "jenis": "Fakultas",
+        "satuan_kerja": "Fakultas Kedokteran Gigi",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 7,
+        "jenis": "Lembaga",
+        "satuan_kerja": "Lembaga Inovasi, Inkubasi Teknologi dan Bisnis",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 8,
+        "jenis": "SPS",
+        "satuan_kerja": "Sekolah Pascasarjana",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 9,
+        "jenis": "Unit",
+        "satuan_kerja": "Pusat Sistem Informasi",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      },
+      {
+        "id": 10,
+        "jenis": "Unit",
+        "satuan_kerja": "Rumah Sakit Gigi dan Mulut",
+        "apbn": 1000000000,
+        "non_pnbp": 1000000000,
+        "bpptn_bh": 1000000000,
+        "boptn": 1000000000,
+        "total_pagu": 4000000000,
+        "buka_tutup": 0
+      }
+    ]
+  }
+}
