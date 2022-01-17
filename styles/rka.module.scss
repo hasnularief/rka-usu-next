@@ -16,7 +16,7 @@
   .keteranganTotal{
     @include fontSizeKeterangan;
   
-    td{
+    td, th{
       border: 2px solid #dddddd;
       height: 2.85em;
   
@@ -33,7 +33,84 @@
 
   .headerDaftarPelaksana{
     margin-top: 30px;
+  }
 
-    
+  &.rkaLatihan{
+    .rkaLatihanTitle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .rkaLatihanLock{
+      color: white;
+      background: #343A40;
+      border-radius: 5px;
+      padding: 2px 8px;
+    }
+
+    .rkaLatihanTable{
+      td, th{
+        border: 1.5px solid #dee2e6;
+        padding: 6px 12px;
+        text-align: right;
+      }
+
+      tbody tr:hover{
+        background: #eeeddd;
+      }
+
+      thead, th{
+        border-bottom: 3px solid #dee2e6;
+      }
+
+      td:first-child{
+        text-align: left;
+      }
+    }
+
+    .rkaLatihanDaftarRencanaKerja{
+      :global{
+
+        td, th{
+          border: 1.5px solid #dee2e6;
+          padding: 10px 12px 15px 12px;
+          vertical-align: top;
+          text-align: right;
+        }
+  
+        thead, th{
+          border-bottom: 3px solid #dee2e6;
+        }
+  
+        tbody tr:hover td{
+          background: #eeeddd;
+        }
+  
+        th:nth-child(3), td:nth-child(3){
+          text-align: left;
+        }
+        
+        th:nth-child(4), td:nth-child(4),
+        th:nth-child(5), td:nth-child(5),
+        th:nth-child(6), td:nth-child(6),
+        th:nth-child(7), td:nth-child(7),
+        th:nth-child(12), td:nth-child(12),
+        th:nth-child(13), td:nth-child(13),
+        th:nth-child(14), td:nth-child(14){
+          text-align: center;
+        }
+
+        .link-to-plan a{
+          color: #3598EC;
+        }
+
+        .link-to-plan:hover a{
+          color: #1271c2;
+          text-decoration: underline;
+          text-decoration-color: #1271c2;
+        }
+      }
+    }
   }
 }

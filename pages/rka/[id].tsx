@@ -5,11 +5,14 @@ import Navbar from '@/components/Navbar';
 import { DownOutlined, EditOutlined } from '@ant-design/icons';
 
 import dummy from '@/dummy/rka-detail.json';
-import { Col, Button, Dropdown, Menu, Row, Table, Radio, Switch, Form, Input, InputNumber } from 'antd';
+import {
+  Col, Button, Dropdown, Menu, Row, Table, Radio, Switch, Form, Input, InputNumber, notification
+} from 'antd';
 
 import styles from '@/styles/rka.module.scss';
 import { ColumnsType } from 'antd/lib/table';
 import ModalForm from '@/components/ModalForm';
+import Link from 'next/link';
 
 interface Props{
   id: number
@@ -29,7 +32,7 @@ const Rka: NextPage<Props> = ({id}) => {
   
   const [editDataId, setEditDataId] = useState<number>(0);
   const [formData, setFormData] = useState<any>({});
-  const [form] = Form.useForm();
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const menu: JSX.Element = (
     <Menu>
@@ -52,19 +55,24 @@ const Rka: NextPage<Props> = ({id}) => {
   }, [editDataId]);
 
   useEffect(() => {
-    form.setFieldsValue(formData);
-  }, [formData])
+    setIsLoading(false);
+  }, [formData]);
 
   const handleEditData = async (e: React.MouseEvent<HTMLElement>) => {
+    setIsLoading(true);
     setEditDataId(parseInt(e.currentTarget.dataset.id ?? "0"));
   };
 
   const handleChangeData = (formValues: any) => {
-    form.setFieldsValue(formValues);
+    console.log(formValues);
+    
+    notification['success']({
+      message: "Data berhasil diubah",
+      duration: 2
+    });
   };
 
   const handleCancelEdit = (e: React.MouseEvent<HTMLElement>) => {
-    form.resetFields();
     setEditDataId(0);
     setFormData({});
   };
@@ -81,7 +89,10 @@ const Rka: NextPage<Props> = ({id}) => {
     },{
       title: 'Satuan Kerja',
       dataIndex: 'satuan_kerja',
-      key: 'satuan_kerja'
+      key: 'satuan_kerja',
+      render: (val: any, record: any) => (<Link href={`/rka/manager/${record.id_satuan_kerja}`}>
+        {val}
+      </Link>)
     },{
       title: 'APBN',
       dataIndex: 'apbn',
@@ -214,11 +225,11 @@ const Rka: NextPage<Props> = ({id}) => {
           columns={columns} scroll={{x: true}} bordered={true} />
       </main>
 
-      <ModalForm isOpen={!!editDataId} isLoading={!!formData && Object.keys(formData).length == 0}
+      <ModalForm isOpen={!!editDataId} isLoading={isLoading}
         formTitle='Form Edit'
         onCancel={handleCancelEdit}
         onSubmit={handleChangeData}
-        form={form}
+        formData={formData}
       >
         <Form.Item labelCol={{span: 6}} label="Jenis" name="jenis">
           <Input />
